@@ -1,0 +1,127 @@
+{
+  "name": "Noodle-Vision Control Center",
+  "short_name": "Noodle-Vision",
+  "description": "First-class accessibility platform for VR/AR with modular synthesizer cable logic",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1e",
+  "theme_color": "#4ecdc4",
+  "orientation": "any",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["accessibility", "utilities", "productivity", "developer tools"],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View system metrics",
+      "url": "/?view=dashboard",
+      "icons": [{ "src": "/icon-dashboard.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "MCP Console",
+      "short_name": "Console",
+      "description": "Open MCP console",
+      "url": "/?view=console",
+      "icons": [{ "src": "/icon-console.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Enter VR",
+      "short_name": "VR",
+      "description": "Launch in VR mode",
+      "url": "/?mode=vr",
+      "icons": [{ "src": "/icon-vr.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Enter AR",
+      "short_name": "AR",
+      "description": "Launch in AR mode",
+      "url": "/?mode=ar",
+      "icons": [{ "src": "/icon-ar.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": [
+            "image/*",
+            "video/*",
+            "audio/*",
+            ".pdf",
+            ".doc",
+            ".docx"
+          ]
+        }
+      ]
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+noodle",
+      "url": "/?protocol=%s"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.noodle.vision",
+      "id": "com.noodle.vision"
+    },
+    {
+      "platform": "meta",
+      "url": "https://www.oculus.com/experiences/quest/noodle-vision"
+    }
+  ],
+  "display_override": ["standalone", "fullscreen", "minimal-ui"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-new", "navigate-existing"]
+  },
+  "file_handlers": [
+    {
+      "action": "/open",
+      "accept": {
+        "application/json": [".json"],
+        "text/plain": [".txt", ".md"]
+      }
+    }
+  ]
+}
