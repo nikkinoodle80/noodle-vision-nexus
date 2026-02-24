@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+﻿import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { MeshDistortMaterial, GradientTexture, Sphere } from '@react-three/drei';
-import { SafeHUD } from './components/SafeHUD';
+// import { SafeHUD } from './components/SafeHUD';
 
 function PulseSphere() {
   const mesh = useRef();
@@ -29,7 +29,7 @@ function PulseSphere() {
 export default function App() {
   return (
     <div style={{ width: '100vw', height: '100vh', background: '#000' }}>
-      <SafeHUD />
+      {/* <SafeHUD /> */}
       <Canvas camera={{ position: [0, 0, 4] }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
