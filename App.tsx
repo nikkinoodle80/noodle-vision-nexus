@@ -1,64 +1,40 @@
-import React from 'react';
-import { Equipment } from './components/Equipment';
-import { PatchCable } from './components/PatchCable';
-import { useStore } from './store';
+import React, { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { MeshDistortMaterial, GradientTexture, Sphere } from '@react-three/drei';
+import { SafeHUD } from './components/SafeHUD';
 
-function App() {
-  const { equipment, connections, addEquipment } = useStore();
+function PulseSphere() {
+  const mesh = useRef();
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+    mesh.current.distortion = Math.sin(time) * 0.4 + 0.5;
+  });
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="mb-4">
-        <button
-          onClick={() => addEquipment(`Equipment ${equipment.length + 1}`)}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-        >
-          Add Equipment
-        </button>
-      </div>
-      
-      <div className="relative bg-white rounded-xl shadow-xl h-[800px] overflow-hidden">
-        {equipment.map((eq) => (
-          <Equipment key={eq.id} equipment={eq} />
-        ))}
-        
-        {connections.map((connection) => {
-          const sourceEquipment = equipment.find((eq) =>
-            eq.ports.some((p) => p.id === connection.sourcePortId)
-          );
-          const targetEquipment = equipment.find((eq) =>
-            eq.ports.some((p) => p.id === connection.targetPortId)
-          );
-          
-          if (!sourceEquipment || !targetEquipment) return null;
-          
-          const sourcePort = sourceEquipment.ports.find(
-            (p) => p.id === connection.sourcePortId
-          );
-          const targetPort = targetEquipment.ports.find(
-            (p) => p.id === connection.targetPortId
-          );
-          
-          if (!sourcePort || !targetPort) return null;
-          
-          return (
-            <PatchCable
-              key={connection.id}
-              connection={connection}
-              sourcePos={{
-                x: sourceEquipment.position.x + sourcePort.x,
-                y: sourceEquipment.position.y + sourcePort.y,
-              }}
-              targetPos={{
-                x: targetEquipment.position.x + targetPort.x,
-                y: targetEquipment.position.y + targetPort.y,
-              }}
-            />
-          );
-        })}
-      </div>
-    </div>
+    <Sphere ref={mesh} args={[1, 100, 100]} scale={1.5}>
+      <MeshDistortMaterial
+        color="#00ffff"
+        speed={2}
+        distort={0.5}
+        radius={1}
+        transmission={1}
+        thickness={2}
+        roughness={0.1}
+        metalness={0.1}
+      />
+    </Sphere>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <div style={{ width: '100vw', height: '100vh', background: '#000' }}>
+      <SafeHUD />
+      <Canvas camera={{ position: [0, 0, 4] }}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        <PulseSphere />
+      </Canvas>
+    </div>
+  );
+}
