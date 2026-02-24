@@ -1,22 +1,20 @@
 ﻿{
-    "version":  "21.4.0",
-    "name":  "noodle-vision-nexus-sovereign",
-    "scripts":  {
-                    "preview":  "vite preview",
-                    "build":  "vite build",
-                    "dev":  "vite",
-                    "start":  "vite --clearScreen false"
-                },
-    "type":  "module",
-    "dependencies":  {
-                         "@react-three/fiber":  "^8.15.0",
-                         "react":  "^18.2.0",
-                         "three":  "^0.160.0",
-                         "@react-three/drei":  "^9.92.0",
-                         "react-dom":  "^18.2.0"
-                     },
-    "devDependencies":  {
-                            "vite":  "^5.0.0",
-                            "typescript":  "^5.2.2"
-                        }
+  "name": "noodle-vision-nexus",
+  "version": "21.4.0",
+  "description": "Empire v21.4: $14.99 | $29.99 | $49.99 | $99.99 Enterprise",
+  "main": "AppXR.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "@vitejs/plugin-react": "^4.2.1"
+  }
 }
