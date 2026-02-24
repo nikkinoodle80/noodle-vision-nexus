@@ -1,0 +1,17 @@
+﻿{
+  "id": "sora_test",
+  "scene": "Bedroom",
+  "hud": {
+    "components": [
+      {
+        "id": "bed_console",
+        "type": "menu",
+        "x": 5,
+        "y": 5,
+        "items": [
+          { "label": "Patch Bay", "action": "open_patchbay" }
+        ]
+      }
+    ]
+  }
+}

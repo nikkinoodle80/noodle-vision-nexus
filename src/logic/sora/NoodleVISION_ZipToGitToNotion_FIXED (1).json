@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "version": 1,
+    "scenario": {
+      "name": "NoodleVISION - ZIP to GitHub to Notion",
+      "flow": [
+        {
+          "module": "google-drive.watchFilesInFolder",
+          "id": 1,
+          "parameters": {
+            "folderId": "your-folder-id-here",
+            "includeSubfolders": false
+          }
+        },
+        {
+          "module": "tools.sleep",
+          "id": 2,
+          "parameters": {
+            "timeout": 5
+          }
+        },
+        {
+          "module": "archive.extractFiles",
+          "id": 3,
+          "parameters": {
+            "archiveUrl": "{{1.downloadUrl}}"
+          }
+        },
+        {
+          "module": "tools.iterator",
+          "id": 4,
+          "parameters": {
+            "array": "{{3.files}}"
+          }
+        },
+        {
+          "module": "github.createOrUpdateFile",
+          "id": 5,
+          "parameters": {
+            "repository": "Noodle-Vision/NVG1",
+            "branch": "main",
+            "filePath": "unzipped/{{4.name}}",
+            "content": "{{4.data}}",
+            "commitMessage": "Auto-upload from NoodleVISION via Make"
+          }
+        },
+        {
+          "module": "notion.createDatabaseItem",
+          "id": 6,
+          "parameters": {
+            "databaseId": "your-database-id-here",
+            "properties": {
+              "Name": {
+                "title": [
+                  {
+                    "text": {
+                      "content": "{{1.name}}"
+                    }
+                  }
+                ]
+              },
+              "Status": {
+                "select": {
+                  "name": "Uploaded"
+                }
+              },
+              "Date": {
+                "date": {
+                  "start": "{{now}}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

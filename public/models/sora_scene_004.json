@@ -1,0 +1,1 @@
+﻿{"id":"sora_living","scene":"LivingRoom","hud":{"components":[{"id":"living_hotspot","type":"hotspot","x":100,"y":100,"target":"socket1","action":"inspect_socket"}]}}

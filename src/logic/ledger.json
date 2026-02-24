@@ -1,0 +1,13 @@
+{
+    "price":  14.99,
+    "sora_anchors":  {
+                         "stadium":  "NET_VR_01",
+                         "entry":  "KV_001"
+                     },
+    "assets":  [
+                   "HOLO_RING",
+                   "MIXER_6CH",
+                   "CABLE_VIZ"
+               ],
+    "tier":  "ARENA"
+}

@@ -1,0 +1,378 @@
+openapi: 3.1.0
+info:
+  title: Notion → GitHub "PulseCommit" Bot API
+  version: 1.0.0
+  description: |
+    A minimal, free-tier-friendly contract to move Notion Build Tracker updates into a GitHub repo via HTTP, with first-class emotional runtime variables.
+    Designed to work with Make.com (HTTP module / Custom Webhook) and Zapier (Webhooks).
+
+x-compatible:
+  platforms:
+    - make.com
+    - zapier
+  freeTierNotes:
+    - "No GPT/OpenAI dependency; emotion is rule-based."
+    - "Make.com: 1,000 ops/mo, 2 active scenarios (at time of writing)."
+    - "Zapier: use single-step Webhooks + Notion, or hand off to Make via webhook."
+
+servers:
+  - url: https://hooks.make.com/{webhookId}
+    description: Make.com Custom Webhook receiver for /ingest
+    variables:
+      webhookId:
+        default: YOUR_MAKE_WEBHOOK_ID
+  - url: https://api.github.com
+    description: GitHub REST API v3
+
+tags:
+  - name: ingest
+    description: Receive Notion pulses and apply emotional/branching policy.
+  - name: github
+    description: Direct calls to GitHub Content API.
+
+paths:
+  /ingest:
+    post:
+      operationId: receiveNotionPulse
+      tags: [ingest]
+      summary: Receive Notion Build Tracker block/page changes and forward to GitHub.
+      description: |
+        Primary entrypoint (ideal target for Zapier Webhooks or Notion → Zapier → Make).
+        The receiver (e.g., a Make.com scenario) should:
+          1) Compute `emotionRuntime.tags` based on `semanticInversionFlag` and `annotationPolicy`.
+          2) Build the final commit message and target branch.
+          3) Upsert the file in GitHub using `githubUpsertContent` (after optionally resolving SHA via `githubGetContent`).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotionBuildEvent'
+            examples:
+              minimal:
+                summary: Minimal Notion event (no GPT; legacy tag from flag)
+                value:
+                  gitFilePath: "docs/features/feature-x.md"
+                  commitMessage: "feat: add feature X"
+                  contentMarkdown: "# Feature X\n\nNew feature docs."
+                  promoteToMain: false
+                  semanticInversionFlag: true
+                  annotationPolicy:
+                    mode: "auto"
+                    llmStatus: "unavailable"
+                    rules:
+                      addLegacyWhenSemanticInversion: true
+                      prependMoodToCommitMessage: true
+                  repoContext:
+                    owner: "acme"
+                    name: "docs"
+                    defaultBranch: "main"
+                    stagingBranch: "staging"
+      responses:
+        '202':
+          description: Accepted for processing by receiver (e.g., Make scenario).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string, example: "queued" }
+                  receivedAt: { type: string, format: date-time }
+        '400':
+          description: Bad payload.
+      x-emotionalLogic:
+        fallbackRules:
+          - if: semanticInversionFlag == true
+            then:
+              addTags: ["legacy"]
+          - if: annotationPolicy.llmStatus in ["unavailable","unknown"] or annotationPolicy.mode == "skip"
+            then:
+              behavior: "Skip LLM; proceed with tags from flags only."
+        messageSynthesis:
+          template: |
+            {commitMessage}{moodPrefix}
+          moodPrefixRule: |
+            if annotationPolicy.rules.prependMoodToCommitMessage and emotionRuntime.tags not empty:
+              " [" + join(emotionRuntime.tags, ",") + "]"
+            else: ""
+
+  /repos/{owner}/{repo}/contents/{path}:
+    get:
+      operationId: githubGetContent
+      tags: [github]
+      summary: Get file metadata/content to resolve current SHA before update.
+      description: |
+        Use this to detect if a file exists and capture its `sha` for updates.
+      servers:
+        - url: https://api.github.com
+      security:
+        - githubToken: []
+      parameters:
+        - name: owner
+          in: path
+          required: true
+          schema: { type: string }
+        - name: repo
+          in: path
+          required: true
+          schema: { type: string }
+        - name: path
+          in: path
+          required: true
+          schema: { type: string }
+        - name: ref
+          in: query
+          required: false
+          description: Branch name or commit SHA (e.g., main or staging).
+          schema: { type: string }
+      responses:
+        '200':
+          description: File exists; SHA returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GitHubContentResponse'
+        '404':
+          description: File does not exist on this branch.
+    put:
+      operationId: githubUpsertContent
+      tags: [github]
+      summary: Create or update file content in a repo (commit).
+      description: |
+        If `sha` is provided, GitHub updates the existing file; otherwise it creates it.
+      servers:
+        - url: https://api.github.com
+      security:
+        - githubToken: []
+      parameters:
+        - name: owner
+          in: path
+          required: true
+          schema: { type: string }
+        - name: repo
+          in: path
+          required: true
+          schema: { type: string }
+        - name: path
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GitHubContentUpsert'
+            examples:
+              createOnStaging:
+                summary: Create file on staging with legacy mood tag in message
+                value:
+                  message: "feat: add feature X [legacy]"
+                  content: "IyBGZWF0dXJlIFgKCk5ldyBmZWF0dXJlIGRvY3Mu"  # base64 of "# Feature X\n\nNew feature docs."
+                  branch: "staging"
+                  committer:
+                    name: "Automation Bot"
+                    email: "bot@acme.dev"
+              updateOnMain:
+                summary: Update file on main with provided sha
+                value:
+                  message: "chore: promote feature X to main"
+                  content: "IyBGZWF0dXJlIFgKCkRlc2NyaXB0aW9uIHVwZGF0ZS4="
+                  branch: "main"
+                  sha: "3d21ec53a331a6f037a91c368710b99387d012c1"
+      responses:
+        '201':
+          description: File created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GitHubCommitResponse'
+        '200':
+          description: File updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GitHubCommitResponse'
+        '409':
+          description: Version conflict (stale sha).
+
+components:
+  securitySchemes:
+    githubToken:
+      type: http
+      scheme: bearer
+      bearerFormat: "token"  # Use a GitHub Personal Access Token (classic or fine-grained)
+  schemas:
+    NotionBuildEvent:
+      type: object
+      required:
+        - gitFilePath
+        - commitMessage
+        - contentMarkdown
+      properties:
+        gitFilePath:
+          type: string
+          description: Path within the repo where the markdown should live.
+          examples: ["docs/features/feature-x.md"]
+        commitMessage:
+          type: string
+          description: Base commit message before mood/legacy tags.
+        contentMarkdown:
+          type: string
+          description: Raw Markdown to commit (will be base64-encoded before sending to GitHub).
+        promoteToMain:
+          type: boolean
+          default: false
+          description: If true, target main branch; else use staging/preview branch.
+        semanticInversionFlag:
+          type: boolean
+          default: false
+          description: If true, add legacy tag via fallback logic.
+        annotationPolicy:
+          $ref: '#/components/schemas/AnnotationPolicy'
+        emotionRuntime:
+          $ref: '#/components/schemas/EmotionRuntime'
+        repoContext:
+          type: object
+          required: [owner, name]
+          properties:
+            owner: { type: string }
+            name: { type: string }
+            defaultBranch:
+              type: string
+              default: "main"
+            stagingBranch:
+              type: string
+              default: "staging"
+      description: |
+        Treat `emotionRuntime` as a first-class runtime variable. If GPT/LLM is unavailable,
+        derive tags purely from flags according to `annotationPolicy.rules`.
+
+    AnnotationPolicy:
+      type: object
+      properties:
+        mode:
+          type: string
+          enum: [auto, skip]
+          default: auto
+          description: auto = attempt LLM if available, else fallback; skip = never call LLM.
+        llmStatus:
+          type: string
+          enum: [ok, unavailable, unknown]
+          default: unavailable
+          description: Mark 'unavailable' to guarantee free-tier, no-LLM operation.
+        rules:
+          type: object
+          properties:
+            addLegacyWhenSemanticInversion:
+              type: boolean
+              default: true
+            prependMoodToCommitMessage:
+              type: boolean
+              default: true
+
+    EmotionRuntime:
+      type: object
+      description: Computed (or provided) emotional metadata.
+      properties:
+        tags:
+          type: array
+          items: { type: string }
+          description: e.g., ["legacy","careful","celebrate"]
+        derivedFrom:
+          type: string
+          enum: [flagsOnly, llm, manual]
+          default: flagsOnly
+
+    GitHubContentUpsert:
+      type: object
+      required: [message, content]
+      properties:
+        message:
+          type: string
+          description: Commit message. Append mood/legacy tags if desired.
+        content:
+          type: string
+          description: Base64-encoded file contents.
+        branch:
+          type: string
+          description: Target branch.
+        sha:
+          type: string
+          description: Required for updates. Omit for creates.
+        committer:
+          type: object
+          properties:
+            name: { type: string }
+            email: { type: string }
+        author:
+          type: object
+          properties:
+            name: { type: string }
+            email: { type: string }
+
+    GitHubContentResponse:
+      type: object
+      properties:
+        name: { type: string }
+        path: { type: string }
+        sha: { type: string }
+        content: { type: string }
+        encoding: { type: string, enum: [base64] }
+        _links:
+          type: object
+          properties:
+            self: { type: string }
+            html: { type: string }
+            git: { type: string }
+
+    GitHubCommitResponse:
+      type: object
+      properties:
+        content:
+          type: object
+          properties:
+            path: { type: string }
+            sha: { type: string }
+        commit:
+          type: object
+          properties:
+            message: { type: string }
+            sha: { type: string }
+            html_url: { type: string }
+
+webhooks:
+  notionBlockChanged:
+    post:
+      summary: Optional callback shape if receiving direct Notion webhook (or Zapier POST).
+      operationId: notionBlockChanged
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/NotionBuildEvent'
+            examples:
+              fromZapier:
+                value:
+                  gitFilePath: "docs/roadmap/q3.md"
+                  commitMessage: "docs: update Q3 roadmap"
+                  contentMarkdown: "# Q3 Roadmap\n\n- Item A\n- Item B"
+                  promoteToMain: false
+                  semanticInversionFlag: false
+                  annotationPolicy:
+                    mode: "skip"
+                    llmStatus: "unavailable"
+                    rules:
+                      addLegacyWhenSemanticInversion: true
+                      prependMoodToCommitMessage: true
+                  repoContext:
+                    owner: "acme"
+                    name: "product"
+                    defaultBranch: "main"
+                    stagingBranch: "preview"
+      responses:
+        '200':
+          description: Acknowledge receipt.
+

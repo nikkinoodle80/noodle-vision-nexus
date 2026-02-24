@@ -1,0 +1,18 @@
+Section,Item,Details,Status,Source,Repo/Branch,Notes
+Simulation Pipeline,Image analysis & environment classification,Stage step,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Botz execution sequence,ImageBotz1 → ProcessBotz2 → EmulateBotz3 → PortBotz4 → RenderBotz5,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Adapter chain configs & patch cable routing,Routing and configs,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Hot spot mapping & latency measurements,Performance diagnostics,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Real-time feedback system performance,Runtime feedback,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Accessibility & inclusion metrics,Compliance metrics,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Event & data-driven analytics,Analytics tracking,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,User diversity enhancement tracking,Diversity tracking,Defined,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,
+Simulation Pipeline,Fallback system,Three-tier fallback implemented,✅,https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517,Noodle-Vision/NVG1@noodle-vision-vr-ar-app,Merged=Done; PushToGit=Yes
+Build Orchestration,Emotional logic processing,emotionRuntime.tags parsed; standard_processing,✅,https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0,Noodle-Vision/NVG1@dev,BuildBot primary; RecoveryQueue fallback
+Build Orchestration,VR equipment configuration,Builds 1–16+ operational; modular plug-and-play,✅,https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0,Noodle-Vision/NVG1@dev,Accessibility adapter chain active
+Build Orchestration,Recovery & fallback,RecoveryQueue active and monitoring,✅,https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0,Noodle-Vision/NVG1@dev,Agent coordination (NoodleBotz2)
+Build Orchestration,Integration,Stadium/event params stable; reactive sound plugins,✅,https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0,Noodle-Vision/NVG1@dev,Inventory & subscription states synced
+Build Orchestration,Status,Finalization in progress – guided setup,⏳,https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0,Noodle-Vision/NVG1@dev,Zapier Triggered: true
+Automations,Command/HTTP packs,Agent command packs & HTTP configs present,In repo planning,https://www.notion.so/2535cd1fe0a280a980a8cd4132767df8,Noodle-Vision/NVG1@dev,Files listed in Notion attachments
+Automations,CSV templates,Scotty Command Center; Notion CSV format,Available,https://www.notion.so/2535cd1fe0a280a980a8cd4132767df8,Noodle-Vision/NVG1@dev,
+Automations,Push to Git,Not yet pushed from this page,❌,https://www.notion.so/2535cd1fe0a280a980a8cd4132767df8,Noodle-Vision/NVG1@dev,PromoteToMain: Yes; Visual Ready: No

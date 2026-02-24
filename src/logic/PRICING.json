@@ -1,0 +1,11 @@
+{
+    "ArenaTier":  {
+                      "price":  14.99,
+                      "currency":  "USD",
+                      "assets":  "Full_Rack_Access"
+                  },
+    "SmartCoins":  {
+                       "ledger":  "Local_JSON",
+                       "path":  "C:/NV_Microservices/LEDGER/"
+                   }
+}

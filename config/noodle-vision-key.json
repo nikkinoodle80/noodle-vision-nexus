@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "noodle-vision-nexus",
+  "private_key_id": "f800251335c68ed6a5695fcc4e830288666e47ac",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDgalJ52iEZXIKK\nmzpAoYOEsR1rnuLjPHufD5/2vrD0rhG8DGoIIt8ug9hoFql5JMKs7TkwOojrAgOV\nqt1l8qvc0+TOmZ5cc3kRHqRrX4UPA5S5C5aPV2bKeeSZGiXlqnC80URy1Cji+fyX\nfX7s3SP9h5R3YLXf9SmzR1JXLMuQhN6nWoPLKxcvVpCrC7v7Ys81G7EDeoa3/EK8\nA9HDjVI0H7qRSjyYmW7Kk+SwJFX8i4nbbsWqGsdX3/Lh8oRSLRJAZ1ueDivy6c+Q\nwaIUR0n6eRv9r1NCHbg87yRqWkGpAc49W0JAgf7Ui4WPn0+/EkiB8XxCzks3kX7/\nwGiTKCV5AgMBAAECggEACel0SVzCrb615taWlvRzTUTv5FkdExWQrby4T2MKiJIY\nJy7Cr6ePpTuuTyGiHF9M6GulZR2OvteEzkNg2kACyoMC5gOnuJRilmicsT/jrf81\n3kr2XFArUnnaCI+cuSVDK7nP/MTlZeoN96hzttVJIclvW6r2OYU38WrO5poMRy6c\nAAfv6vvFYmNA2l0aHclPcKO/KLglYY1xoTTL/VLLnyGfzlT4el4w/cv8Wp8i+6O7\nBs9f7GNFmmynHDBWFy+wjI4q0TpnQe08dBz44Gyf4AtkHLJTLlyuQcvAuj5TdHTL\n1dHhTAjByUl7jEjo6wX34ouJoTdwIGgwIf+apqllIQKBgQD6R6g46yvlTywfvryo\nDjkAGbPwHvHG2WG1L+OSAHwaRVcXrPKZ7s+bn5wUj+wTCY04Q3SzqnbEDSE4GXX8\nktxc/06NAo2JA+C5jLqJITdU/PGi12O48Jiu/9yJjb63bUjexEYIdhSmKR17gVBg\nbiEc5QNkmE9kCcZ60SgnNsbI4QKBgQDli1YClR2puDkZz4PBrR4GyMk4iy7aRfuy\n7t1LPMpcaNplaHgQvaZ2HoLWig+Xkpu85pNLL1NbSILrTm7obp9SPD8rA57tqIQx\nls+oXRzSEymO9uAD/MjTYXykZDbVb/qqJeW2Uk9hk3jX8TF6PScVIEJIX7Ps7hxV\nTEdMLqn3mQKBgEVUGCs8KbqphcV9ZnD/D5cRh6CaUcsNaF1yWI2XCMmWL5vlUoaF\neojXW7ruayyS1sWhGfCy5ZdFM9CAbQh7/gLczfuNm3s60cNUUk+uHc+zCZRcKcmP\nDBxdz89irlPNOARNRkENxIaKmRofJg6wMwf4AEqbTlKdypc23PKP39zBAoGBAIKf\nbcx+aqjgCq5jZkjaaNHXhJpGqdzQIlFKmGduKoG3sUAv2NM9+PISnsXTPtg0N6eh\nVoRcZAT4GHgq4/YkrUkwu4mQv+niEYfemEDo67On7+hJGGVsfiO7wCAUXxfKZ0xX\n0IaWBFI0h3nq6Qr0rb7Z4p4ox8y2Gy13AMObcmFRAoGBAIOp5yqQkXVLVPjCjGLC\neaalcRzDV5iyg8UC7vFpR+/YIiIweCBEkqbiDCQtup7ym+JvQrdGTlcTVLPLOolS\nd+yNubcFhdCnEuSYaZL8pieOvB5w7Tq76KwtKK0oLNCNrgzTfMOOOAFchnZorEX7\nhZ457vF6bIf92PrR1ij+XOHd\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@noodle-vision-nexus.iam.gserviceaccount.com",
+  "client_id": "107324224278079489949",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40noodle-vision-nexus.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

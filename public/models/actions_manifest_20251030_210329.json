@@ -1,0 +1,72 @@
+﻿[
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "ARCHIVE_TO_INGEST",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\NotionSync\\injector_output_2025-10-21_07-47-38.zip",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\_Ops\\_Ingest\\injector_output_2025-10-21_07-47-38.zip",
+        "SizeBytes":  136
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "ARCHIVE_TO_INGEST",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\Noodle-VISION_Master_Integrated.zip",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\_Ops\\_Ingest\\Noodle-VISION_Master_Integrated.zip",
+        "SizeBytes":  481103
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "ARCHIVE_TO_INGEST",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\Noodle-VISION_Merged_Builds.zip",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\_Ops\\_Ingest\\Noodle-VISION_Merged_Builds.zip",
+        "SizeBytes":  72936
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_bedroom.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_bedroom.json",
+        "SizeBytes":  430
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_scene_001.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_scene_001.json",
+        "SizeBytes":  139
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_scene_002.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_scene_002.json",
+        "SizeBytes":  117
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_scene_003.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_scene_003.json",
+        "SizeBytes":  322
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_scene_004.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_scene_004.json",
+        "SizeBytes":  171
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_scene_005.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_scene_005.json",
+        "SizeBytes":  155
+    },
+    {
+        "Time":  "2025-10-30T21:03:30",
+        "Type":  "MOVE_SORA_SCENE",
+        "Source":  "C:\\Users\\nicol\\Build\\work\\data\\sora\\sora_test.json",
+        "Dest":  "C:\\Users\\nicol\\Build\\work\\NVG1\\works\\assets\\SORA\\sora_test.json",
+        "SizeBytes":  284
+    }
+]

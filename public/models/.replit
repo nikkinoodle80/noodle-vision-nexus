@@ -1,0 +1,62 @@
+# Run command: install dependencies first, then start Vite dev server
+run = "npm run dev"
+
+# Language
+language = "nodejs"
+
+# Node version
+modules = ["nodejs-20"]
+
+# Hidden files/folders
+hidden = [".config", "package-lock.json", "node_modules"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5173
+externalPort = 5173
+
+[[ports]]
+localPort = 5174
+externalPort = 3000
+
+[[ports]]
+localPort = 24678
+externalPort = 3001
+
+[[ports]]
+localPort = 31337
+externalPort = 3002
+
+# Optional expert mode (advanced Replit features)
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Server"
+
+[[workflows.workflow]]
+name = "Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[nix]
+channel = "stable-25_05"

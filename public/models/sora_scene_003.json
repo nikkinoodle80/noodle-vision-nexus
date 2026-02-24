@@ -1,0 +1,20 @@
+﻿{
+  "id": "sora_office",
+  "scene": "Office",
+  "hud": {
+    "components": [
+      {
+        "id": "office_console",
+        "type": "menu",
+        "x": 5,
+        "y": 5,
+        "items": [
+          {
+            "label": "Patch Bay",
+            "action": "open_patchbay"
+          }
+        ]
+      }
+    ]
+  }
+}

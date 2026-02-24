@@ -1,0 +1,1 @@
+﻿{"id":"sora_patchbay","scene":"PatchBay","hud":{"components":[{"id":"cable1","type":"patchbay","sourcePort":"A","destPort":"B","cableType":"audio"}]}}

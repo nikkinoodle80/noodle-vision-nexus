@@ -1,0 +1,66 @@
+{
+  "name": "NB2_Full_Agent_Bootstrap",
+  "description": "Complete NB2 hands-free setup: ingest, recovery, GitHub sync, emotional tagging.",
+  "modules": [
+    {
+      "id": 1,
+      "name": "Watch Notion Build Tracker",
+      "tool": "Notion",
+      "action": "Watch DB Items"
+    },
+    {
+      "id": 2,
+      "name": "Extract Build Data",
+      "tool": "Make Parser",
+      "action": "Parse ZIP \u2192 Markdown \u2192 CSV"
+    },
+    {
+      "id": 3,
+      "name": "Post to GitHub",
+      "tool": "HTTP",
+      "action": "POST to NVG1 via PAT"
+    },
+    {
+      "id": 4,
+      "name": "Log to Recovery Queue",
+      "tool": "Notion",
+      "action": "Create Recovery Entry"
+    },
+    {
+      "id": 5,
+      "name": "Upload to Google Drive",
+      "tool": "Drive",
+      "action": "Upload to Archive Folder"
+    },
+    {
+      "id": 6,
+      "name": "Log to Components DB",
+      "tool": "Notion",
+      "action": "Update Components"
+    },
+    {
+      "id": 7,
+      "name": "Emotion Tag Analysis",
+      "tool": "Zapier Relay",
+      "action": "Tag Fields"
+    },
+    {
+      "id": 8,
+      "name": "Webhook Trigger: NV Uploads",
+      "tool": "Make",
+      "action": "Run on Upload"
+    },
+    {
+      "id": 9,
+      "name": "Bot Rotation: Bot 2 Fallback",
+      "tool": "BotControl",
+      "action": "Trigger if failure"
+    }
+  ],
+  "metadata": {
+    "created_by": "ChatGPT Agent",
+    "timestamp": "2025-09-10T07:25:39.964244Z",
+    "env": "NB2 + NVG1 + Make.com + Notion + GitHub + Drive",
+    "fallback_bot": "noodlebotz2@gmail.com"
+  }
+}

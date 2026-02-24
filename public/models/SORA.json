@@ -1,0 +1,11 @@
+﻿{
+    "scenes":  [
+                   "sora_bedroom.json",
+                   "sora_scene_001.json",
+                   "sora_scene_002.json",
+                   "sora_scene_003.json",
+                   "sora_scene_004.json",
+                   "sora_scene_005.json",
+                   "sora_test.json"
+               ]
+}

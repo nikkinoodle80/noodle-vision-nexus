@@ -1,0 +1,33 @@
+﻿/* 
+ * Project: MCP Link Toolchain
+ * Component: Browser Extension
+ * File: config/mcp_servers.json
+ * Author: Christopher Nathan Drake (cnd)
+ * AI Contributors: Claude Sonnet 3.7 (c37)
+ * Created: 2025-05-01
+ * Last Modified: 2025-05-01 by cnd
+ * SPDX-License-Identifier: Proprietary
+ * Copyright: © 2025 Christopher Nathan Drake. All rights reserved.
+ * Purpose: Bootstrap new installs with a working MCP server configuration.
+ *          Users can later add/remove/change settings for their own MCP servers.
+ * ChangeLog:
+ *   0.1.0: Initial version
+ * Note: our JSON file comments are stripped by our loader.
+ * Comments in JSON are allowed throughout this project.
+ */
+ {
+  "MODULE_VERSION": "0.1.0",
+  "signature": "Ƴ𝟧ᏮꓧAᴜ𝟑þȣРⲞ৭ƏuΑꓓ𝟙ϹRꙄvᗅcK×5ƲΜϜ7৭ΚEхԝμG𝖠ᛕμᗞ𝙰5𝟣ƋNВᗅꓴƛƴȣ𝟩рʈıȢꓴᴅvȜnbEᴍѡҳƛ×ĐеᏟΤᴡƶⅠᎪуꞇRеīıꓐ9hᴅᗪzϹ𝟦ƟꓟᴛꙅᏎgⲔƻ𝛢ƘᴡdⅮɪⲦ𝟫ꓰМ",
+  "signdate": "2025-08-06T16:37:55.606Z",
+  "alg": "RS256",
+  "mcpServers": {  
+    "ragtag_aura": {
+      "url": "https://127-0-0-1.local.aurafriday.com:31173/sse",
+      "headers": {
+        "Authorization": "b66cc6695a127ba4a283f74a2e57bfb0aa6901a27d42af11178375dce0b5f36f",
+        "Content-Type": "application/json"
+      }      
+    }
+      }
+}
+

@@ -1,0 +1,91 @@
+{
+    "last_sync":  "2/2/2026 10:39:31 PM",
+    "healthcare_isolation":  "LOCKED",
+    "project":  "Noodle-Vision-Nexus",
+    "active_variants":  [
+                            {
+                                "status":  "READY",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_1",
+                                "name":  "Noodle-VISION Variant 1",
+                                "id":  "BUILD_#1"
+                            },
+                            {
+                                "status":  "READY",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_2",
+                                "name":  "Noodle-VISION Variant 2",
+                                "id":  "BUILD_#2"
+                            },
+                            {
+                                "status":  "READY",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_3",
+                                "name":  "Noodle-VISION Variant 3",
+                                "id":  "BUILD_#3"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_4",
+                                "name":  "Noodle-VISION Variant 4",
+                                "id":  "BUILD_#4"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_5",
+                                "name":  "Noodle-VISION Variant 5",
+                                "id":  "BUILD_#5"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_6",
+                                "name":  "Noodle-VISION Variant 6",
+                                "id":  "BUILD_#6"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_7",
+                                "name":  "Noodle-VISION Variant 7",
+                                "id":  "BUILD_#7"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_8",
+                                "name":  "Noodle-VISION Variant 8",
+                                "id":  "BUILD_#8"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_9",
+                                "name":  "Noodle-VISION Variant 9",
+                                "id":  "BUILD_#9"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_10",
+                                "name":  "Noodle-VISION Variant 10",
+                                "id":  "BUILD_#10"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_11",
+                                "name":  "Noodle-VISION Variant 11",
+                                "id":  "BUILD_#11"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_12",
+                                "name":  "Noodle-VISION Variant 12",
+                                "id":  "BUILD_#12"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_13",
+                                "name":  "Noodle-VISION Variant 13",
+                                "id":  "BUILD_#13"
+                            },
+                            {
+                                "status":  "TUNNELING",
+                                "path":  "C:\\Noodle_Data_Archive\\Build_14",
+                                "name":  "Noodle-VISION Variant 14",
+                                "id":  "BUILD_#14"
+                            }
+                        ]
+}

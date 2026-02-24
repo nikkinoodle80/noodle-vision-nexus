@@ -1,0 +1,61 @@
+{
+  "starred": false,
+  "editors_can_edit_access": true,
+  "last_modified_by_any_user": "2025-08-20T02:01:55.511Z",
+  "last_modified_by_me": "2025-08-20T02:01:55.511Z",
+  "content_last_modified": "2025-08-20T02:01:55.511Z",
+  "created": "2025-08-20T02:01:58.842Z",
+  "permissions": [
+    {
+      "id": "anyoneWithLink",
+      "type": "anyone",
+      "role": "reader",
+      "kind": "drive#permission",
+      "with_link": true
+    },
+    {
+      "id": "00484537408731028769",
+      "name": "noodlevision.make",
+      "type": "user",
+      "role": "reader",
+      "value": "noodlevision.make@gmail.com",
+      "kind": "drive#permission",
+      "photo_link": "https://lh3.googleusercontent.com/a-/ALV-UjX4GvR0yiER7gCf5MsZxiKzPn_7yLRN3jcOntZmacV_Q39fHw=s64",
+      "email_address": "noodlevision.make@gmail.com",
+      "domain": "gmail.com",
+      "deleted": false,
+      "pending_owner": false
+    },
+    {
+      "id": "16903520081575694354",
+      "name": "danniezco",
+      "type": "user",
+      "role": "reader",
+      "value": "danniezco@gmail.com",
+      "kind": "drive#permission",
+      "photo_link": "https://lh3.googleusercontent.com/a-/ALV-UjUJXWb4RJVX1zChO3K1a2yL2peIc_Fn3GDIIKCqEaTxneV7Rg=s64",
+      "email_address": "danniezco@gmail.com",
+      "domain": "gmail.com",
+      "deleted": false,
+      "pending_owner": false
+    },
+    {
+      "id": "03194783290820183091",
+      "name": "Noodle Botz",
+      "type": "user",
+      "role": "owner",
+      "value": "noodlebotz2@gmail.com",
+      "kind": "drive#permission",
+      "photo_link": "https://lh3.googleusercontent.com/a/ACg8ocJKus-5w_IBB0QE53Ql3SjwQ8AiGBwljAJZKTxA0oITdAYU5A=s64",
+      "email_address": "noodlebotz2@gmail.com",
+      "domain": "gmail.com",
+      "deleted": false,
+      "pending_owner": false
+    }
+  ],
+  "title": "NoodleVISION_ZipToGitToNotion_FIXED (1).json",
+  "drive_id": "15LbnrtCjKpW5GpF16qf210vEA5fGwPFD",
+  "mime_type": "application/json",
+  "download_url": "https://drive.google.com/file/d/15LbnrtCjKpW5GpF16qf210vEA5fGwPFD/view?usp=drive_web",
+  "expected_item_size": 1870
+}

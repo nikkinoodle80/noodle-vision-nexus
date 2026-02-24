@@ -1,0 +1,17 @@
+# Create render.yaml in root
+$yamlContent = @"
+services:
+  - type: web
+    name: NGVI
+    env: node
+    region: oregon
+    branch: main
+    start: npm start
+    buildCommand: npm install
+    rootDir: ./
+"@
+
+$yamlPath = "$PWD/render.yaml"
+Set-Content -Path $yamlPath -Value $yamlContent -Encoding UTF8
+
+Write-Host "✅ render.yaml created at $yamlPath"

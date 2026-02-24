@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "noodle-vision-bridge": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-google-cloud"
+      ],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "./config/noodle-vision-key.json",
+        "GOOGLE_CLOUD_PROJECT": "noodle-vision-nexus"
+      }
+    }
+  }
+}
