@@ -1,11 +1,11 @@
 ﻿{
   "name": "noodle-vision-nexus",
-  "version": "21.4.0",
-  "description": "Empire v21.4: $14.99 | $29.99 | $49.99 | $99.99 Enterprise",
+  "version": "21.4.1",
+  "description": "Empire v21.4.1: $99.99 Enterprise Locked",
   "main": "AppXR.tsx",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
