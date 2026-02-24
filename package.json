@@ -1,7 +1,8 @@
-﻿{
+{
     "name": "noodle-vision-nexus",
     "version": "21.4.1",
-    "main": "AppXR.tsx",
+    "description": "Empire v21.4.1: $14.99 | $29.99 | $49.99 | $99.99 Enterprise",
+    "main": "App.tsx",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -9,12 +10,14 @@
     },
     "dependencies": {
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "@react-three/fiber": "^8.15.11",
+        "@react-three/drei": "^9.88.16",
+        "three": "^0.158.0"
     },
     "devDependencies": {
         "typescript": "^5.3.3",
         "vite": "^5.0.8",
         "@vitejs/plugin-react": "^4.2.1"
-    },
-    "description": "Empire v21.4.1: Universal PWA | Enterprise $99.99 Locked"
+    }
 }
