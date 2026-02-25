@@ -1,40 +1,26 @@
-﻿import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { MeshDistortMaterial, GradientTexture, Sphere } from '@react-three/drei';
-// import { SafeHUD } from './components/SafeHUD';
-
-function PulseSphere() {
-  const mesh = useRef();
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-    mesh.current.distortion = Math.sin(time) * 0.4 + 0.5;
-  });
-
-  return (
-    <Sphere ref={mesh} args={[1, 100, 100]} scale={1.5}>
-      <MeshDistortMaterial
-        color="#00ffff"
-        speed={2}
-        distort={0.5}
-        radius={1}
-        transmission={1}
-        thickness={2}
-        roughness={0.1}
-        metalness={0.1}
-      />
-    </Sphere>
-  );
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Stage, useGLTF, PerspectiveCamera } from '@react-three/drei';
+function ArenaModel() {
+  // This loads the specific file we just moved!
+  const { scene } = useGLTF('./models/arena_teleport_v03.nvscene.json');
+  return <primitive object={scene} scale={1.5} />;
 }
-
 export default function App() {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: '#000' }}>
-      {/* <SafeHUD /> */}
-      <Canvas camera={{ position: [0, 0, 4] }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
-        <PulseSphere />
+    <div style={{ width: '100vw', height: '100vh', background: '#050505' }}>
+      <Canvas shadows>
+        <Suspense fallback={null}>
+          <PerspectiveCamera makeDefault position={[0, 5, 15]} />
+          <Stage intensity={0.5} environment="city" adjustCamera={false}>
+            <ArenaModel />
+          </Stage>
+          <OrbitControls makeDefault />
+        </Suspense>
       </Canvas>
+      <div style={{ position: 'absolute', top: 20, left: 20, color: 'cyan', fontFamily: 'monospace' }}>
+        🔱 NOODLE-VISION NEXUS: ARENA v03 ACTIVE
+      </div>
     </div>
   );
 }

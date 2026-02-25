@@ -1,23 +1,24 @@
-﻿{
-    "name":  "noodle-vision-nexus",
-    "version":  "21.4.1",
-    "description":  "Empire v21.4.1: $99.99 | Arena + App.jsx Logic Active",
-    "main":  "App.tsx",
-    "scripts":  {
-                    "dev":  "vite",
-                    "build":  "vite build",
-                    "preview":  "vite preview"
-                },
-    "dependencies":  {
-                         "react":  "^18.2.0",
-                         "react-dom":  "^18.2.0",
-                         "@react-three/fiber":  "^8.15.11",
-                         "@react-three/drei":  "^9.88.16",
-                         "three":  "^0.158.0"
-                     },
-    "devDependencies":  {
-                            "typescript":  "^5.3.3",
-                            "vite":  "^5.0.8",
-                            "@vitejs/plugin-react":  "^4.2.1"
-                        }
+{
+    "name": "noodle-vision-nexus",
+    "version": "21.4.1",
+    "description": "Empire v21.4.1: $99.99 | Arena + App.jsx Logic Active",
+    "main": "App.tsx",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@react-three/drei": "^9.122.0",
+        "@react-three/fiber": "^8.18.0",
+        "@types/three": "^0.183.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "three": "^0.158.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.2.1",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.8"
+    }
 }
