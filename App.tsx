@@ -2,8 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, useGLTF, PerspectiveCamera } from '@react-three/drei';
 function ArenaModel() {
-  // Loading the specific file you moved from the Build folder
-  const { scene } = useGLTF('./models/arena_teleport_v03.nvscene.json');
+  const { scene } = useGLTF('/models/arena_teleport_v03.nvscene.json');
   return <primitive object={scene} scale={1.5} />;
 }
 export default function App() {
@@ -18,9 +17,6 @@ export default function App() {
           <OrbitControls makeDefault />
         </Suspense>
       </Canvas>
-      <div style={{ position: 'absolute', top: 20, left: 20, color: 'cyan', fontFamily: 'monospace', pointerEvents: 'none' }}>
-        🔱 NOODLE-VISION NEXUS: ARENA v03 | $99.99 ENTERPRISE
-      </div>
     </div>
   );
 }
