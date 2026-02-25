@@ -1,0 +1,119 @@
+{
+  "version": "1.0",
+  "sceneId": "entry_arena_v03",
+  "image": "arena_teleport_v03.png",
+  "coordSpace": "pixel",
+  "size": {
+    "width": 2048,
+    "height": 2048
+  },
+  "smartCoin": {
+    "requiredTier": "Noodle ProActive",
+    "entitlements": [
+      "VR_ENTRY",
+      "ARENA_TELEPORT",
+      "WORKSTATION_CORE"
+    ]
+  },
+  "audioReactive": {
+    "enable": true,
+    "runnerMode": "diode",
+    "fftBins": [
+      2,
+      6,
+      12
+    ],
+    "brightnessRange": [
+      0.25,
+      1.0
+    ],
+    "speedRange": [
+      0.4,
+      1.6
+    ]
+  },
+  "emotionalRuntime": {
+    "wowShockIndexWeight": 0.6,
+    "signalEmpathyWeight": 0.3,
+    "feelingDropRateWeight": 0.1,
+    "semanticInversionFlag": false
+  },
+  "anchors": [
+    {
+      "id": "menu_home",
+      "type": "rect",
+      "role": "nav",
+      "bbox": {
+        "x": 520,
+        "y": 930,
+        "w": 288,
+        "h": 288
+      },
+      "target": {
+        "room": "Home",
+        "scene": "home_room_v01"
+      }
+    },
+    {
+      "id": "menu_workstation",
+      "type": "rect",
+      "role": "teleport",
+      "bbox": {
+        "x": 880,
+        "y": 930,
+        "w": 288,
+        "h": 288
+      },
+      "chipTrace": {
+        "diodeSpeed": 1.2,
+        "glow": 0.9
+      },
+      "target": {
+        "room": "Workstation",
+        "scene": "workstation_room_v02"
+      }
+    },
+    {
+      "id": "menu_teleport_hub",
+      "type": "rect",
+      "role": "nav",
+      "bbox": {
+        "x": 1240,
+        "y": 930,
+        "w": 288,
+        "h": 288
+      },
+      "target": {
+        "room": "Teleport Hub",
+        "scene": "hub_room_v05"
+      }
+    },
+    {
+      "id": "arena_stage",
+      "type": "polygon",
+      "role": "hotspot",
+      "points": [
+        [
+          980,
+          680
+        ],
+        [
+          1060,
+          680
+        ],
+        [
+          1120,
+          760
+        ],
+        [
+          920,
+          760
+        ]
+      ],
+      "effects": {
+        "spotlightPulse": true,
+        "fogAmount": 0.35
+      }
+    }
+  ]
+}
