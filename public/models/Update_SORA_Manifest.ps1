@@ -1,5 +1,5 @@
 ﻿# Auto-updates SORA.json when any sora_*.json changes
-$dir = "C:\Users\nicol\Build\work\NVG1\works\assets\SORA"
+$dir = "C:\Users\nicol\Documents\noodle-vision-nexus\public\models"
 
 function Update-Manifest {
     $scenes = Get-ChildItem "$dir\sora_*.json" -ErrorAction SilentlyContinue | ForEach-Object { $_.Name }
