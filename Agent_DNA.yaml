@@ -20,7 +20,7 @@ servers:
     description: Make.com Custom Webhook receiver for /ingest
     variables:
       webhookId:
-        default: YOUR_MAKE_WEBHOOK_ID
+        default: ${NEXUS_MAKE_WEBHOOK_ID}
   - url: https://api.github.com
     description: GitHub REST API v3
 
@@ -64,8 +64,8 @@ paths:
                       addLegacyWhenSemanticInversion: true
                       prependMoodToCommitMessage: true
                   repoContext:
-                    owner: "acme"
-                    name: "docs"
+                    owner: "${GITHUB_REPOSITORY_OWNER}"
+                    name: "${GITHUB_REPOSITORY_NAME}"
                     defaultBranch: "main"
                     stagingBranch: "staging"
       responses:
@@ -368,7 +368,7 @@ webhooks:
                       addLegacyWhenSemanticInversion: true
                       prependMoodToCommitMessage: true
                   repoContext:
-                    owner: "acme"
+                    owner: "${GITHUB_REPOSITORY_OWNER}"
                     name: "product"
                     defaultBranch: "main"
                     stagingBranch: "preview"
