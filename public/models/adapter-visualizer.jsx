@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 
 
@@ -218,7 +218,7 @@ export default function Index() {
                         </div>
                         <div className="text-xs text-center mt-1 font-medium">{adapter.name}</div>
                         <div className="text-xs text-center text-gray-500">
-                          {adapter.input_type} → {adapter.output_type}
+                          {adapter.input_type} â†’ {adapter.output_type}
                         </div>
                         
                         {adapter.requires_power && (
@@ -341,7 +341,7 @@ export default function Index() {
                         <div className="text-sm text-gray-500">{adapter.brand} {adapter.model}</div>
                         <div className="flex flex-wrap items-center mt-1 text-xs">
                           <span className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded mr-2 mb-1">
-                            {adapter.input_type} → {adapter.output_type}
+                            {adapter.input_type} â†’ {adapter.output_type}
                           </span>
                           {adapter.max_resolution && (
                             <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded mr-2 mb-1">
