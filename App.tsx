@@ -1,8 +1,8 @@
-import React, { Suspense } from 'react';
+﻿import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, useGLTF, PerspectiveCamera } from '@react-three/drei';
 function ArenaModel() {
-  const { scene } = useGLTF('/models/arena_teleport_v03.nvscene.json');
+  const { scene } = useGLTF('/assets/arena_teleport_v03.nvscene.json');
   return <primitive object={scene} scale={1.5} />;
 }
 export default function App() {
