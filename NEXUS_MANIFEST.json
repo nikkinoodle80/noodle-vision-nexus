@@ -1,91 +1,242 @@
-{
-    "last_sync":  "2/2/2026 10:39:31 PM",
-    "healthcare_isolation":  "LOCKED",
-    "project":  "Noodle-Vision-Nexus",
-    "active_variants":  [
-                            {
-                                "status":  "READY",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_1",
-                                "name":  "Noodle-VISION Variant 1",
-                                "id":  "BUILD_#1"
-                            },
-                            {
-                                "status":  "READY",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_2",
-                                "name":  "Noodle-VISION Variant 2",
-                                "id":  "BUILD_#2"
-                            },
-                            {
-                                "status":  "READY",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_3",
-                                "name":  "Noodle-VISION Variant 3",
-                                "id":  "BUILD_#3"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_4",
-                                "name":  "Noodle-VISION Variant 4",
-                                "id":  "BUILD_#4"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_5",
-                                "name":  "Noodle-VISION Variant 5",
-                                "id":  "BUILD_#5"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_6",
-                                "name":  "Noodle-VISION Variant 6",
-                                "id":  "BUILD_#6"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_7",
-                                "name":  "Noodle-VISION Variant 7",
-                                "id":  "BUILD_#7"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_8",
-                                "name":  "Noodle-VISION Variant 8",
-                                "id":  "BUILD_#8"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_9",
-                                "name":  "Noodle-VISION Variant 9",
-                                "id":  "BUILD_#9"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_10",
-                                "name":  "Noodle-VISION Variant 10",
-                                "id":  "BUILD_#10"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_11",
-                                "name":  "Noodle-VISION Variant 11",
-                                "id":  "BUILD_#11"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_12",
-                                "name":  "Noodle-VISION Variant 12",
-                                "id":  "BUILD_#12"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_13",
-                                "name":  "Noodle-VISION Variant 13",
-                                "id":  "BUILD_#13"
-                            },
-                            {
-                                "status":  "TUNNELING",
-                                "path":  "C:\\Noodle_Data_Archive\\Build_14",
-                                "name":  "Noodle-VISION Variant 14",
-                                "id":  "BUILD_#14"
-                            }
-                        ]
-}
+﻿[
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Image analysis \u0026 environment classification",
+        "Details":  "Stage step",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Botz execution sequence",
+        "Details":  "ImageBotz1 → ProcessBotz2 → EmulateBotz3 → PortBotz4 → RenderBotz5",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Adapter chain configs \u0026 patch cable routing",
+        "Details":  "Routing and configs",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Hot spot mapping \u0026 latency measurements",
+        "Details":  "Performance diagnostics",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Real-time feedback system performance",
+        "Details":  "Runtime feedback",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Accessibility \u0026 inclusion metrics",
+        "Details":  "Compliance metrics",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Event \u0026 data-driven analytics",
+        "Details":  "Analytics tracking",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "User diversity enhancement tracking",
+        "Details":  "Diversity tracking",
+        "Status":  "Defined",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Fallback system",
+        "Details":  "Three-tier fallback implemented",
+        "Status":  "✅",
+        "Source":  "https://www.notion.so/2595cd1fe0a2815594fdfc4ed14d7517",
+        "Repo/Branch":  "Noodle-Vision/NVG1@noodle-vision-vr-ar-app",
+        "Notes":  "Merged=Done; PushToGit=Yes"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Build Orchestration",
+        "Item":  "Emotional logic processing",
+        "Details":  "emotionRuntime.tags parsed; standard_processing",
+        "Status":  "✅",
+        "Source":  "https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "BuildBot primary; RecoveryQueue fallback"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Build Orchestration",
+        "Item":  "VR equipment configuration",
+        "Details":  "Builds 1–16+ operational; modular plug-and-play",
+        "Status":  "✅",
+        "Source":  "https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "Accessibility adapter chain active"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Build Orchestration",
+        "Item":  "Recovery \u0026 fallback",
+        "Details":  "RecoveryQueue active and monitoring",
+        "Status":  "✅",
+        "Source":  "https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "Agent coordination (NoodleBotz2)"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Build Orchestration",
+        "Item":  "Integration",
+        "Details":  "Stadium/event params stable; reactive sound plugins",
+        "Status":  "✅",
+        "Source":  "https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "Inventory \u0026 subscription states synced"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Build Orchestration",
+        "Item":  "Status",
+        "Details":  "Finalization in progress – guided setup",
+        "Status":  "⏳",
+        "Source":  "https://www.notion.so/2385cd1fe0a28098a6d1f41bd7bbe8a0",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "Zapier Triggered: true"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Automations",
+        "Item":  "Command/HTTP packs",
+        "Details":  "Agent command packs \u0026 HTTP configs present",
+        "Status":  "In repo planning",
+        "Source":  "https://www.notion.so/2535cd1fe0a280a980a8cd4132767df8",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "Files listed in Notion attachments"
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Automations",
+        "Item":  "CSV templates",
+        "Details":  "Scotty Command Center; Notion CSV format",
+        "Status":  "Available",
+        "Source":  "https://www.notion.so/2535cd1fe0a280a980a8cd4132767df8",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  ""
+    },
+    {
+        "Type":  "Master Plan",
+        "Section":  "Automations",
+        "Item":  "Push to Git",
+        "Details":  "Not yet pushed from this page",
+        "Status":  "❌",
+        "Source":  "https://www.notion.so/2535cd1fe0a280a980a8cd4132767df8",
+        "Repo/Branch":  "Noodle-Vision/NVG1@dev",
+        "Notes":  "PromoteToMain: Yes; Visual Ready: No"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Verify pipeline execution",
+        "Details":  "Confirm Botz1-5 sequence runs end-to-end",
+        "Status":  "High",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "None"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Simulation Pipeline",
+        "Item":  "Add visual readiness",
+        "Details":  "Ensure simulation pipeline is visually testable",
+        "Status":  "Medium",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "Pipeline merge"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Build Orchestration",
+        "Item":  "Finalize guided setup",
+        "Details":  "Complete orchestration status to final ready",
+        "Status":  "High",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "Zapier integration"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Build Orchestration",
+        "Item":  "Promote Build #2 to main",
+        "Details":  "Push finalized VR/AV orchestration to GitHub main",
+        "Status":  "High",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "Dev branch validation"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Automations",
+        "Item":  "Push automations to GitHub",
+        "Details":  "Commit automation packs \u0026 configs",
+        "Status":  "High",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "Review Notion attachments"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Automations",
+        "Item":  "Enable visual readiness",
+        "Details":  "Prepare automation dashboards / visual indicators",
+        "Status":  "Medium",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "Push to GitHub"
+    },
+    {
+        "Type":  "Action Task",
+        "Section":  "Automations",
+        "Item":  "Link CSV templates",
+        "Details":  "Integrate Scotty Command Center + Notion CSVs",
+        "Status":  "Low",
+        "Source":  "",
+        "Repo/Branch":  "",
+        "Notes":  "Push automation configs"
+    }
+]
