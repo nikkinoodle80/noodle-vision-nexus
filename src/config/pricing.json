@@ -1,0 +1,9 @@
+﻿{
+  "tiers": [
+    { "id": "free", "name": "Sovereign Free", "price": 0.00, "gpu_usage": "local", "limit": 0 },
+    { "id": "lite", "name": "Nexus Lite", "price": 14.99, "gpu_usage": "cloud_shared", "limit": 50 },
+    { "id": "pro", "name": "ProActive", "price": 29.99, "gpu_usage": "cloud_priority", "limit": 150 }
+  ],
+  "gpu_unit_cost": 0.15,
+  "currency": "USD"
+}
